@@ -1,0 +1,10 @@
+$family: -apple-system, BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Simsun,Helvetica,Arial;
+$fontsize: 14px;
+$prefix: lg;
+
+$space: 8px; //原件和原件，模块和模块之间的间隔空隙
+
+$gutter-count: 12; //栅格列数
+$gutter: $space; //栅格之间空隙
+$radius: 2px; //公共圆角
+$shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5); //阴影UI?

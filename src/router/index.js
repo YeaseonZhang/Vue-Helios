@@ -1,22 +1,30 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HelloWorld from '@/components/HelloWorld';
-import List from '@/components/list';
-// '@': path.resolve(__dirname, '../src')
+import Blank from '@/page/blank';
+
+// redis
+import RedisManage from '@/page/redis-manage/redisTaskManage';
 
 Vue.use(Router);
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      path: '/demo',
+      component: Blank
     },
     {
-      path: '/list',
-      name: 'List',
-      component: List
+      path: '/redis',
+      component: Blank,
+      name: 'redis',
+      children: [
+        {
+          path: 'taskManage',
+          name: 'redisTaskManage',
+          component: RedisManage,
+          props: true
+        }
+      ]
     }
   ]
 });

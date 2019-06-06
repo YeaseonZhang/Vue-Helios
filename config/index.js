@@ -2,9 +2,11 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path');
+// const baseUrl = 'https://easy-mock.com/mock/5a5e0b0b86ca3e664cb80814/';  // 要代理api的线上服务url
 
 module.exports = {
   base: {
+    appName: 'app',
     entryFile: './src/main.js', // Vue入口文件，因为baseConfig配置了绝对路径，所以不需要'../src/main.js'
     resolveAlias: { // 设置import路径别名
       'vue$': 'vue/dist/vue.esm.js',
@@ -17,7 +19,12 @@ module.exports = {
     assetsSubDirectory: 'static', // 指定CopyWebpackPlugin 插件 to参数
     assetsPublicPath: '/', // 指定output.publicPath
     staticDirectory: '../static', // 指定CopyWebpackPlugin 插件 from参数，相对于/build目录下的文件
-    proxyTable: {}, // 设置webpack-dev-server代理，一般由于访问线上mock服务
+    // proxyTable: { // 设置webpack-dev-server代理，一般由于访问线上mock服务
+    //   '/api': {  // mock 基础url，实际需求设置
+    //     target: baseUrl, // 要代理到api的url
+    //     secure: baseUrl.indexOf('https://') < 0 ? true : false, // 若代理地址为https，需要设置为false
+    //   }
+    // },
 
     // webpack-dev-server 参数相关 (https://webpack.js.org/configuration/dev-server/#devserver)
     host: 'localhost', // 设置host，优先级小于process.env.HOST
@@ -30,7 +37,7 @@ module.exports = {
     notifyOnErrors: true, // 是否以Notification API方式提示错误
 
     // ESLint
-    useEslint: true, // 设置true，打包阶段会显示在console控制台显示lint错误和警告的代码
+    useEslint: false, // 设置true，打包阶段会显示在console控制台显示lint错误和警告的代码
     showEslintErrorsInOverlay: true, // 设置true，lint错误和警告会在浏览器蒙层显示
 
     // source maps 设置
@@ -39,7 +46,7 @@ module.exports = {
     // vue-loader 设置 (https://vue-loader.vuejs.org/en/options.html)
     // 如果在调试 *.vue 文件是遇到问题，设置为false
     cacheBusting: true, // css缓存相关设置(https://css-tricks.com/strategies-for-cache-busting-css/)
-    cssSourceMap: true
+    cssSourceMap: true  // 默认开启css sourcemap
   },
 
   build: {
@@ -48,12 +55,12 @@ module.exports = {
 
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'), // output.path 绝对目录
-    assetsSubDirectory: 'static', // 指定CopyWebpackPlugin 插件 to参数
-    assetsPublicPath: '/', // 指定output.publicPath
+    assetsSubDirectory: './', // 指定CopyWebpackPlugin 插件 to参数
+    assetsPublicPath: '//static.360buyimg.com/sbs/', // 指定output.publicPath，配置线上路径前缀
     staticDirectory: '../static', // 指定CopyWebpackPlugin 插件 from参数，相对于/build目录下的文件
 
     // source maps
-    productionSourceMap: true,
+    productionSourceMap: false,  // 生产环境不输出sourcemap
     devtool: '#source-map',
 
     // gzip压缩，设置true需要安装 `npm install --save-dev compression-webpack-plugin`

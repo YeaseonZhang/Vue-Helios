@@ -1,0 +1,118 @@
+@import '_mixin';
+
+/* 原子类 */
+/* 字体颜色 ？*/
+@mixin link($classname:null) {
+  #{$classname} {
+    a,
+    & {
+      @content;
+    }
+  }
+
+  a#{$classname} {
+
+    &:link,
+    &:visited {
+      @content;
+    }
+
+  }
+}
+
+@include link('.txt-red') {
+  color: $c22;
+}
+
+@include link('.txt-green') {
+  color: $c24
+}
+
+@include link('.txt-yellow') {
+  color: $c23
+}
+
+.txt-blue {
+  color: $c4
+}
+
+.txt-c13 {
+  color: $c13
+}
+
+.txt-c14 {
+  color: $c14
+}
+
+.txt-c15 {
+  color: $c15
+}
+
+.txt-c16 {
+  color: $c16
+}
+
+/* 定位 */
+$position:(relative, absolute, fixed, static);
+
+@each $value in $position {
+  .is-#{$value} {
+    position: $value;
+  }
+}
+
+/* 垂直居中 */
+/* .is-vertically{
+    @include v(2)
+} */
+/* 显示方式 */
+$display:("hide" : none,
+"block" : block,
+"inline-block" : inline-block,
+"table" : table,
+"inline-table" : inline-table,
+"table-cell" : table-cell,
+);
+
+@each $classname,
+$value in $display {
+  .is-#{$classname} {
+    display: $value;
+  }
+}
+
+$size:("12" : 12px,
+"14" : 14px,
+"16" : 16px,
+"20" : 20px);
+
+@each $classname,
+$value in $size {
+  .font-#{$classname} {
+    font-size: $value;
+  }
+}
+
+.#{$prefix}-para {
+  line-height: 1.5;
+  $this: &;
+
+  +#{$this} {
+    margin-top: $space;
+  }
+
+  &-l {
+    $this: &;
+    line-height: 2;
+
+    +#{$this} {
+      margin-top: $space;
+    }
+
+    +.#{$prefix}-para-img {
+      margin-top: $space*2;
+      margin-bottom: $space*2;
+      text-align: center
+    }
+  }
+}

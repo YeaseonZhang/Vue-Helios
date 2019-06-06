@@ -1,24 +1,51 @@
 <template>
-  <div id="app">
-    <!-- <img src="./assets/logo.png"> -->
-    <img src="./assets/test.gif">
-    <router-view/>
+  <div class="lg-layout lg-layout-row">
+    <!-- navbar -->
+    <Header></Header>
+    <div class="lg-layout-main">
+      <div class="lg-layout-container">
+        <Menu></Menu>
+        <div class="lg-layout-inner">
+          <router-view />
+        </div>
+      </div>
+    </div>
   </div>
+
 </template>
 
 <script>
+import Header from '@/components/header';
+import Menu from '@/components/navmenu';
+
 export default {
-  name: 'App'
+  name: 'App',
+  data() {
+    return {
+    };
+  },
+  components: {
+    Header,
+    Menu
+  },
+  created() {
+
+  },
+  mounted() {
+
+  },
+  methods: {
+
+  }
 };
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+@import "./common/css/_base.scss";
+@import "./common/css/_mixin.scss";
+@import "./common/css/_layout.scss";
+@import "./common/css/_navmenu.scss";
+@import "./common/css/_crumb.scss";
+@import "./common/css/_iconfont.scss";
+
 </style>

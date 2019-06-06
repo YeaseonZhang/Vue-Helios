@@ -1,0 +1,28 @@
+@import '_mixin';
+
+/* crumbs */
+.#{$prefix}-crumbs {
+  &-list {
+    font-size: 12px;
+  }
+  &-item {
+    display: inline-block;
+    color: $c15;
+    a {
+      font-weight: bold;
+      &:link,
+      &:visited {
+        color: $c15;
+      }
+      &:hover {
+        color: $c11;
+      }
+    }
+    &:not(:last-child) {
+      &:after {
+        content: "/";
+        color: $c16;
+      }
+    }
+  }
+}

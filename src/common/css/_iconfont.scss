@@ -1,0 +1,398 @@
+@import '_mixin';
+
+/* iconfont list */
+/* $iconfont:(
+	"arrows"			:"\f25b",
+	"assembly"			:'\f25c',
+	"basic"				:'\f253',
+	"calendar"			:'\f145',
+	"camera"			:'\f255',
+	'chart'				:'\f254',
+	'classify'			:'\f25d',
+	'close'				:'\f137',
+	'cloud'				:'\f25e',
+	'computer'			:'\f25f',
+	'delete'			:'\f18e',
+	'design'			:'\f260',
+	'dislike'			:'\f261',
+	'down'				:'\f262',
+	'download'			:'\f263',
+	'edit'				:'\f264',
+	'edit2'				:'\f252',
+	'enlarge'			:'\f265',
+	'error'				:'\f266',
+	'eye'				:'\f267',
+	'backward'			:'\f268',
+	'forwards'			:'\f269',
+	'file'				:'\f26a',
+	'form'				:'\f26b',
+	'forward'			:'\f26c',
+	'exit'				:'\f26d',
+	'screen'			:'\f26e',
+	'hide'				:'\f26f',
+	'homepage'			:'\f270',
+	'layout'			:'\f257',
+	'left'				:'\f271',
+	'like'				:'\f272',
+	'line-chart'		:'\f273',
+	'location'			:'\f1b2',
+	'lock'				:'\f25a',
+	'message'			:'\f256',
+	'more'				:'\f274',
+	'narrow'			:'\f275',
+	'clip'				:'\f276',
+	'phone'				:'\f277',
+	'picture'			:'\f278',
+	'play'				:'\f279',
+	'refresh'			:'\f27a',
+	'remind'			:'\f27b',
+	'downloading'		:'\f27c',
+	'right'				:'\f27d',
+	'search'			:'\f184',
+	'setup'				:'\f27e',
+	'shrink'			:'\f27f',
+	'sbackward'			:'\f280',
+	'sforward'			:'\f281',
+	'suspend'			:'\f282',
+	'code'				:'\f283',
+	'time'				:'\f284',
+	'unlock'			:'\f285',
+	'up'				:'\f286',
+	'upload'			:'\f287',
+	'user'				:'\f288',
+	'video'				:'\f259',
+	'wallet'			:'\f19b',
+	'loading'			:'\f27a'
+); */
+/* iconfont */
+@font-face {
+	font-family:"iconfont";
+	src:url("//static.360buyimg.com/JDC_legao/css/fonts/iconfont.eot");
+	src:url("//static.360buyimg.com/JDC_legao/css/fonts/iconfont.eot?#iefix") format("embedded-opentype"),
+		url("//static.360buyimg.com/JDC_legao/css/fonts/iconfont.woff") format("woff"),
+		url("//static.360buyimg.com/JDC_legao/css/fonts/iconfont.ttf") format("truetype");
+	font-weight:normal;
+	font-style:normal;
+}
+[class^="#{$prefix}-icon-"],[class*=" #{$prefix}-icon-"]{
+	font-family:"iconfont";
+	display:inline-block;
+	vertical-align:baseline;
+	line-height:1;
+	font-weight:normal;
+	font-style:normal;
+	speak:none;
+	text-decoration:inherit;
+	text-transform:none;
+	text-rendering:auto;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+
+}
+.#{$prefix}-icon{
+	&-arrows{
+		&:before{
+			content:"\f25b"
+		}
+	}
+	&-assembly{
+		&:before{
+			content:"\f25c"
+		}
+	}
+	&-basic{
+		&:before{
+			content:"\f253"
+		}
+	}
+	&-calendar{
+		&:before{
+			content:"\f145"
+		}
+	}
+	&-camera{
+		&:before{
+			content:"\f255"
+		}
+	}
+	&-chart{
+		&:before{
+			content:"\f254"
+		}
+	}
+	&-classify{
+		&:before{
+			content:"\f25d"
+		}
+	}
+	&-close{
+		&:before{
+			content:"\f137"
+		}
+	}
+	&-cloud{
+		&:before{
+			content:"\f25e"
+		}
+	}
+	&-computer{
+		&:before{
+			content:"\f25f"
+		}
+	}
+	&-delete{
+		&:before{
+			content:"\f18e"
+		}
+	}
+	&-design{
+		&:before{
+			content:"\f260"
+		}
+	}
+	&-dislike{
+		&:before{
+			content:"\f261"
+		}
+	}
+	&-down{
+		&:before{
+			content:"\f262"
+		}
+	}
+	&-download{
+		&:before{
+			content:"\f263"
+		}
+	}
+	&-edit{
+		&:before{
+			content:"\f264"
+		}
+	}
+	&-edit2{
+		&:before{
+			content:"\f252"
+		}
+	}
+	&-enlarge{
+		&:before{
+			content:"\f265"
+		}
+	}
+	&-error{
+		&:before{
+			content:"\f266"
+		}
+	}
+	&-eye{
+		&:before{
+			content:"\f267"
+		}
+	}
+	&-backward{
+		&:before{
+			content:"\f268"
+		}
+	}
+	&-forwards{
+		&:before{
+			content:"\f269"
+		}
+	}
+	&-file{
+		&:before{
+			content:"\f26a"
+		}
+	}
+	&-form{
+		&:before{
+			content:"\f26b"
+		}
+	}
+	&-forward{
+		&:before{
+			content:"\f26c"
+		}
+	}
+	&-exit{
+		&:before{
+			content:"\f26d"
+		}
+	}
+	&-screen{
+		&:before{
+			content:"\f26e"
+		}
+	}
+	&-hide{
+		&:before{
+			content:"\f26f"
+		}
+	}
+	&-homepage{
+		&:before{
+			content:"\f270"
+		}
+	}
+	&-layout{
+		&:before{
+			content:"\f257"
+		}
+	}
+	&-left{
+		&:before{
+			content:"\f27d"
+		}
+	}
+	&-like{
+		&:before{
+			content:"\f272"
+		}
+	}
+	&-line-chart{
+		&:before{
+			content:"\f273"
+		}
+	}
+	&-location{
+		&:before{
+			content:"\f1b2"
+		}
+	}
+	&-lock{
+		&:before{
+			content:"\f25a"
+		}
+	}
+	&-message{
+		&:before{
+			content:"\f256"
+		}
+	}
+	&-more{
+		&:before{
+			content:"\f274"
+		}
+	}
+	&-narrow{
+		&:before{
+			content:"\f275"
+		}
+	}
+	&-clip{
+		&:before{
+			content:"\f276"
+		}
+	}
+	&-phone{
+		&:before{
+			content:"\f277"
+		}
+	}
+	&-picture{
+		&:before{
+			content:"\f278"
+		}
+	}
+	&-play{
+		&:before{
+			content:"\f279"
+		}
+	}
+	&-refresh{
+		&:before{
+			content:"\f27a"
+		}
+	}
+	&-remind{
+		&:before{
+			content:"\f27b"
+		}
+	}
+	&-downloading{
+		&:before{
+			content:"\f27c"
+		}
+	}
+	&-right{
+		&:before{
+			content:"\f271"
+		}
+	}
+	&-search{
+		&:before{
+			content:"\f184"
+		}
+	}
+	&-setup{
+		&:before{
+			content:"\f27e"
+		}
+	}
+	&-shrink{
+		&:before{
+			content:"\f27f"
+		}
+	}
+	&-sbackward{
+		&:before{
+			content:"\f280"
+		}
+	}
+	&-sforward{
+		&:before{
+			content:"\f281"
+		}
+	}
+	&-suspend{
+		&:before{
+			content:"\f282"
+		}
+	}
+	&-code{
+		&:before{
+			content:"\f283"
+		}
+	}
+	&-time{
+		&:before{
+			content:"\f284"
+		}
+	}
+	&-unlock{
+		&:before{
+			content:"\f285"
+		}
+	}
+	&-up{
+		&:before{
+			content:"\f286"
+		}
+	}
+	&-upload{
+		&:before{
+			content:"\f287"
+		}
+	}
+	&-user{
+		&:before{
+			content:"\f288"
+		}
+	}
+	&-video{
+		&:before{
+			content:"\f259"
+		}
+	}
+	&-wallet{
+		&:before{
+			content:"\f19b"
+		}
+	}
+	&-loading{
+		&:before{
+			content:"\f27a"
+		}
+	}
+}
